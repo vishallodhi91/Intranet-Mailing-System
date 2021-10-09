@@ -1,0 +1,31 @@
+<html>
+<head><title>MailCompose page</title>
+<script language=javascript>
+	function checkfornull()
+	{
+		if(document.f1.tto.value=="")
+		{
+			alert("ToAddress could not be Empty");
+			document.f1.tto.focus();
+		}
+		else
+			document.f1.submit();
+	}
+</script>
+<body bgcolor="olive">
+<h2 align=center><font face="times new roman" color=red>Now you can Compose your Mail</font></h2>
+<form action="http://localhost:8080/servlet/sendmsg" method=post name=f1>
+<pre>
+       <input type=button name=sendmail value=sendmail onclick=checkfornull()>            <a href=''>Attachments</a>
+<p><font color=yellow>
+To     <input type=text name=tto size=40>
+Subject<input type=text name=tsub size=40>
+Cc     <input type=text name=tcc size=40>
+Bcc    <input type=text  name=tbcc size=40>
+Message<textarea cols=50 rows=10 name=ta></textarea>
+<p>
+	<input type=button name=sendmail value=sendmail onclick=checkfornull()>
+</form>
+</pre>
+</body>
+</html>

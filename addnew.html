@@ -1,0 +1,23 @@
+<html>
+<head><title> NEW ADDRESS SCREEN</title></head>
+<body bgcolor="pink">
+<form action="http://localhost:8080/servlet/setaddress" method=post>
+<pre>
+<center>
+<h2><font color="green">NEW ADDRESS SCREEN</font></h2>
+<h5 align="right"><font color="green">
+<script language="vbscript">
+ Dim t,a
+t=time()
+d=date()
+  document.write("DATE:" & d & "<br>")
+  document.write("TIME:" & t)
+</script></h5></font></center>
+<hr>
+<h5>Adding new Adress to Address Box</h5>
+<br><center>
+Name      <input  name=name ><br>
+Nick Name <input name=nick><br>
+Address   <input name=addr><br>
+<input type=submit name=b1 value=Add></center>
+</form></body></html>

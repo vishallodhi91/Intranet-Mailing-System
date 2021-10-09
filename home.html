@@ -1,0 +1,37 @@
+<HTML>
+<HEAD><TITLE>Login Page</TITLE>
+<script language=javascript>
+	function checkfornull()
+	{
+		if(document.f1.una.value=="")
+		{
+			alert("Login User Field Contains no Data","User Name");
+			document.f1.una.focus();
+		}
+		else if (document.f1.pwd.value=="")
+		{
+			alert("Password field Contains no Data","Password");
+			document.f1.pwd.focus();
+		}
+		else
+			document.f1.submit();
+	}
+</script>
+</HEAD>
+<BODY onload=f1.una.focus() BGColor="olive"><br> 
+<FORM action="http://localhost:8080/servlet/user1" method=post name=f1>
+<FONT COLOR=YELLOW><CENTER><H2>Already Signed</FONT></H2></CENTER>
+<TABLE BGCOLOR=BLUE ALIGN=CENTER BORDER=2>
+<TR ALIGN=CENTER><TD>User Name</TD><TD><INPUT Type=text Name=una SIZE=15 ></TD></TR>
+<TR ALIGN=CENTER><TD>Password</TD><TD><INPUT Type=password Name=pwd SIZE=15 onblur=checkfornull()></TD></TR>
+</TABLE>
+<CENTER>
+<P>
+<INPUT Type=button Name=Login Value=Login onclick=checkfornull()><BR>
+<P>
+<FONT COLOR=YELLOW>New Users</FONT>
+<A HREF="http://localhost:8080/usersignup.html">Sign up</A>
+</CENTER>
+</FORM>
+</BODY>
+</HTML>

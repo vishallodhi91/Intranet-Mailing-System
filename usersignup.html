@@ -1,0 +1,42 @@
+<html>
+<head><title>Signup the form</title>
+<script language=javascript>
+	function checkpwd()
+	{
+	if(!(document.f1.t2.value==document.f1.t3.value))	
+	{	
+		alert("Invalid Password Please Retry..");
+		document.f1.t2.value="";
+		document.f1.t3.value="";
+		document.f1.t2.focus();
+	}
+	else
+		document.f1.submit();
+	}
+
+</script>
+</head>
+<body onload=document.f1.t1.focus() bgcolor="silver">
+<FORM action="http://localhost:8080/servlet/userlogin" method=post name=f1>
+<H3><center><font color="green"> FILL UP THE FORM</font></center></H3>
+<hr>
+<center>
+<table border=2 bgcolor="teal">
+<font color="aqua">
+<tr><td>USERNAME</td><td><input maxlength=15 name=t1 size=15></td></tr>
+<tr><td>PASSWORD</td><td><input maxlength=10 TYPE=PASSWORD name=t2 size=10></td></tr>
+<tr><td>CONFIRM</td><td><input maxlength=10 TYPE=PASSWORD name=t3 size=10></td></tr>
+<tr><td>AGE</td><td><input maxlength=3 name=t4 size=3></td></tr>
+<tr><td>GENDER</td><td><input type=radio name=r1 value="Female">FEMALE<INPUT TYPE=RADIO NAME=r1 value="Male">MALE
+<tr><td>CITY<td><input maxlength=10 name=t6 size=10>
+<tr><td>STATE<td><input maxlength=10 name=t7 size=10>
+<tr><td>PINCODE<td><input maxlength=6 name=t8 size=6>
+<tr><td>NATION<td><input maxlength=10 name=t9 size=10>
+</table><p>
+<input type=button value="REGISTER" onClick=checkpwd()>
+<input type=reset value="RESET"><br>
+</font>
+</center>
+</FORM>
+</body>
+</html>
